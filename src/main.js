@@ -4,26 +4,16 @@ import {
 	Text,
 	View
 } from 'react-native';
-
-const sampleText = `
-  ____  _                 _     _______  _______ 
- / ___|(_)_ __ ___  _ __ | | __|_   _\\ \\/ /_   _|
- \\___ \\| | '_ ' _ \\| '_ \\| |/ _ \\| |  \\  /  | |  
-  ___) | | | | | | | |_) | |  __/| |  /  \\  | |  
- |____/|_|_| |_| |_| .__/|_|\\___||_| /_/\\_\\ |_|  
-                   |_|                           
-`;
+import TxtView from './components/TxtView/txt-view'
 
 export default class SimpleTXT extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
 				<Text style={styles.welcome}>
-					Welcome to React Native!
+					Welcome to React Native!...
         </Text>
-				<Text style={styles.instructions}>
-					{sampleText}
-        </Text>
+				<TxtView/>
 			</View>
 		);
 	}
@@ -40,12 +30,5 @@ const styles = StyleSheet.create({
 		fontSize: 20,
 		textAlign: 'center',
 		margin: 10,
-	},
-	instructions: {
-		fontSize: 10,
-		fontFamily: 'monospace',
-		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
-	},
+	}
 });
