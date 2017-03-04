@@ -5,6 +5,15 @@ import {
 	View
 } from 'react-native';
 
+const sampleText = `
+  ____  _                 _     _______  _______ 
+ / ___|(_)_ __ ___  _ __ | | __|_   _\\ \\/ /_   _|
+ \\___ \\| | '_ ' _ \\| '_ \\| |/ _ \\| |  \\  /  | |  
+  ___) | | | | | | | |_) | |  __/| |  /  \\  | |  
+ |____/|_|_| |_| |_| .__/|_|\\___||_| /_/\\_\\ |_|  
+                   |_|                           
+`;
+
 export default class SimpleTXT extends Component {
 	render() {
 		return (
@@ -13,8 +22,7 @@ export default class SimpleTXT extends Component {
 					Welcome to React Native!
         </Text>
 				<Text style={styles.instructions}>
-					Double tap R on your keyboard to reload,{'\n'}
-					Shake or press menu button for dev menu
+					{sampleText}
         </Text>
 			</View>
 		);
@@ -34,6 +42,8 @@ const styles = StyleSheet.create({
 		margin: 10,
 	},
 	instructions: {
+		fontSize: 10,
+		fontFamily: 'monospace',
 		textAlign: 'center',
 		color: '#333333',
 		marginBottom: 5,
