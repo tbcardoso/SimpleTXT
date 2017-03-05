@@ -18,27 +18,21 @@ const sampleText = `
 export default class TxtView extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
-				<Text style={styles.txtView}>
-					{sampleText}
-        </Text>
-			</View>
+			<Text style={styles.txtView}>
+				{sampleText}
+			</Text>
 		);
 	}
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
-	},
 	txtView: {
+		flex: 1,
 		fontSize: 10,
 		fontFamily: 'monospace',
-		textAlign: 'center',
+		textAlign: 'left',
 		color: '#333333',
-		marginBottom: 5,
+		backgroundColor: '#F5FCFF',
+		//marginBottom: 5,
 	},
 });
