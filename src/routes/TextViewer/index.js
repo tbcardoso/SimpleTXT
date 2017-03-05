@@ -1,7 +1,8 @@
-import TxtViewContainer from './containers/TxtViewContainer'
+import TextViewer from './components/TextViewer'
 import reducer from './modules/reducer'
 
 export default {
-	component: TxtViewContainer,
+	title: 'TextViewer',
+	component: TextViewer,
 	reducer: reducer
 }
