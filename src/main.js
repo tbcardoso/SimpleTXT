@@ -1,34 +1,19 @@
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import createStore from './store/createStore'
 import {
 	StyleSheet,
 	Text,
 	View
 } from 'react-native';
-import TxtView from './components/TxtView/txt-view'
+import TextViewerRoute from './routes/TextViewer'
 
 export default class SimpleTXT extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
-				<Text style={styles.welcome}>
-					Welcome to React Native!...
-        </Text>
-				<TxtView/>
-			</View>
+			<Provider store={createStore()}>
+					<TextViewerRoute.component />
+			</Provider>
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
-	},
-	welcome: {
-		fontSize: 20,
-		textAlign: 'center',
-		margin: 10,
-	}
-});
