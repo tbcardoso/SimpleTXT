@@ -3,9 +3,10 @@ import {
 	StyleSheet,
 	View,
 } from 'react-native';
-import TxtViewContainer from '../containers/TxtViewContainer'
+import TxtView from '../../../components/TxtView/TxtView'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import {FilePickerManager} from 'NativeModules';
+import { FilePickerManager } from 'NativeModules';
+import { selectFileSuccess } from '../modules/actions'
 
 
 export default class TextViewer extends React.Component {
@@ -24,9 +25,7 @@ export default class TextViewer extends React.Component {
 						console.log('FilePickerManager Error: ', response.error);
 					}
 					else {
-						this.setState({
-							file: response
-						});
+						this.props.dispatch(selectFileSuccess(response.path));
 					}
 				});
 				break;
@@ -41,7 +40,7 @@ export default class TextViewer extends React.Component {
 					style={styles.toolbar}
 					actions={toolbarActions}
 					onActionSelected={this._onActionSelected} />
-				<TxtViewContainer style={{ flex: 1 }} />
+				<TxtView style={{ flex: 1 }} filePath={this.props.filePath} />
 			</View>
 		);
 	}

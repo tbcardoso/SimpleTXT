@@ -17,9 +17,11 @@ const sampleText = `
 
 export default class TxtView extends Component {
 	render() {
+		const text = this.props.filePath || sampleText;
+
 		return (
 			<Text style={styles.txtView}>
-				{sampleText}
+				{text}
 			</Text>
 		);
 	}
