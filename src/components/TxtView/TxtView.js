@@ -17,7 +17,7 @@ const sampleText = `
 
 export default class TxtView extends Component {
 	render() {
-		const text = this.props.filePath || sampleText;
+		const text = this.props.fileContent || sampleText;
 
 		return (
 			<Text style={styles.txtView}>
@@ -28,7 +28,7 @@ export default class TxtView extends Component {
 }
 
 TxtView.propTypes = {
-  filePath: React.PropTypes.string.isRequired,
+  fileContent: React.PropTypes.string,
 };
 
 

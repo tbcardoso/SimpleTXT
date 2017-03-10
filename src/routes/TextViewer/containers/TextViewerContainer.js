@@ -22,7 +22,10 @@ function onOpenFile(dispatch) {
 
 
 function mapStateToProps(state) {
-	return { filePath: state.TextViewer.selectedFile.filePath }
+	return {
+		filePath: state.TextViewer.selectedFile.filePath,
+		fileContent: state.TextViewer.selectedFile.fileContent,
+	}
 }
 
 function mapDispatchToProps(dispatch) {

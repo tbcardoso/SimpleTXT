@@ -1,16 +1,17 @@
 import { combineReducers } from 'redux'
-import { SELECT_FILE_SUCCESS } from './actions'
+import * as Actions from './actions'
 
 
 const selectedFileInitialState = {
 	filePath: ''
 }
 
-function selectedFile(state = selectedFileInitialState, {type, filePath}) {
-	switch (type) {
-    case SELECT_FILE_SUCCESS:
-      const newState = {...state, filePath};
-      return newState;
+function selectedFile(state = selectedFileInitialState, action) {
+	switch (action.type) {
+    case Actions.SELECT_FILE_SUCCESS:
+      return {...state, filePath: action.filePath};
+    case Actions.LOAD_FILE_SUCCESS:
+      return {...state, filePath: action.filePath, fileContent: action.fileContent};
     default:
       return state;
   }

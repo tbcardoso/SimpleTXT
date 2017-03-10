@@ -18,14 +18,16 @@ export default class TextViewer extends React.Component {
 	}
 
 	render() {
+		const title = this.props.filePath || 'SimpleTXT';
 		return (
 			<View style={{ flex: 1 }}>
 				<Icon.ToolbarAndroid
-					title="SimpleTXT"
+					title={title}
 					style={styles.toolbar}
 					actions={toolbarActions}
 					onActionSelected={this._onActionSelected} />
-				<TxtView style={{ flex: 1 }} filePath={this.props.filePath} />
+				<TxtView style={{ flex: 1 }}
+					filePath={this.props.filePath} fileContent={this.props.fileContent} />
 			</View>
 		);
 	}
@@ -33,6 +35,7 @@ export default class TextViewer extends React.Component {
 
 TextViewer.propTypes = {
   filePath: React.PropTypes.string.isRequired,
+	fileContent: React.PropTypes.string,
 	onOpenFile: React.PropTypes.func.isRequired,
 };
 
