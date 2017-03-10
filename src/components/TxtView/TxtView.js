@@ -27,6 +27,12 @@ export default class TxtView extends Component {
 	}
 }
 
+TxtView.propTypes = {
+  filePath: React.PropTypes.string.isRequired,
+};
+
+
+
 const styles = StyleSheet.create({
 	txtView: {
 		flex: 1,
