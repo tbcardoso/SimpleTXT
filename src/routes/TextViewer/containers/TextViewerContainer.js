@@ -25,7 +25,7 @@ function mapStateToProps(state) {
 	return { filePath: state.TextViewer.selectedFile.filePath }
 }
 
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
 	return {
 		onOpenFile: () => {
       onOpenFile(dispatch)
