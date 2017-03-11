@@ -1,7 +1,7 @@
-import { connect } from 'react-redux'
-import TextViewer from '../components/TextViewer'
+import { connect } from 'react-redux';
+import TextViewer from '../components/TextViewer';
 import { FilePickerManager } from 'NativeModules';
-import { selectFileSuccess } from '../modules/actions'
+import { selectFileSuccess } from '../modules/actions';
 
 
 function onOpenFile(dispatch) {

@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux'
-import * as Actions from './actions'
+import { combineReducers } from 'redux';
+import * as Actions from './actions';
 
 
 const selectedFileInitialState = {
@@ -9,9 +9,11 @@ const selectedFileInitialState = {
 function selectedFile(state = selectedFileInitialState, action) {
 	switch (action.type) {
     case Actions.SELECT_FILE_SUCCESS:
-      return {...state, filePath: action.filePath};
+      return {...state, loadingFilePath: action.filePath};
     case Actions.LOAD_FILE_SUCCESS:
-      return {...state, filePath: action.filePath, fileContent: action.fileContent};
+      return {...state, loadingFilePath: '', filePath: action.filePath, fileContent: action.fileContent};
+    case Actions.LOAD_FILE_ERROR:
+      return {...state, loadingFilePath: '', error: action.error };
     default:
       return state;
   }

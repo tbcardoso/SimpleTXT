@@ -1,10 +1,20 @@
-import React from 'react'
+import React from 'react';
 import {
 	StyleSheet,
 	View,
 } from 'react-native';
-import TxtView from '../../../components/TxtView/TxtView'
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import TxtView from '../../../components/TxtView/TxtView';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+
+const sampleText = `
+  ____  _                 _     _______  _______ 
+ / ___|(_)_ __ ___  _ __ | | __|_   _\\ \\/ /_   _|
+ \\___ \\| | '_ ' _ \\| '_ \\| |/ _ \\| |  \\  /  | |  
+  ___) | | | | | | | |_) | |  __/| |  /  \\  | |  
+ |____/|_|_| |_| |_| .__/|_|\\___||_| /_/\\_\\ |_|  
+                   |_|                           
+`;
 
 
 export default class TextViewer extends React.Component {
@@ -18,7 +28,10 @@ export default class TextViewer extends React.Component {
 	}
 
 	render() {
-		const title = this.props.filePath || 'SimpleTXT';
+		const pos = this.props.filePath.lastIndexOf('/');
+		const fileName = this.props.filePath.substring(Math.max(0, pos+1));
+		const title = fileName || 'SimpleTXT';
+		const fileContent = fileName ? this.props.fileContent : sampleText;
 		return (
 			<View style={{ flex: 1 }}>
 				<Icon.ToolbarAndroid
@@ -27,7 +40,7 @@ export default class TextViewer extends React.Component {
 					actions={toolbarActions}
 					onActionSelected={this._onActionSelected} />
 				<TxtView style={{ flex: 1 }}
-					filePath={this.props.filePath} fileContent={this.props.fileContent} />
+					filePath={this.props.filePath} fileContent={fileContent} />
 			</View>
 		);
 	}

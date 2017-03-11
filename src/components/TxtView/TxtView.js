@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
 	StyleSheet,
 	Text,
@@ -6,22 +6,11 @@ import {
 } from 'react-native';
 
 
-const sampleText = `
-  ____  _                 _     _______  _______ 
- / ___|(_)_ __ ___  _ __ | | __|_   _\\ \\/ /_   _|
- \\___ \\| | '_ ' _ \\| '_ \\| |/ _ \\| |  \\  /  | |  
-  ___) | | | | | | | |_) | |  __/| |  /  \\  | |  
- |____/|_|_| |_| |_| .__/|_|\\___||_| /_/\\_\\ |_|  
-                   |_|                           
-`;
-
 export default class TxtView extends Component {
 	render() {
-		const text = this.props.fileContent || sampleText;
-
 		return (
 			<Text style={styles.txtView}>
-				{text}
+				{this.props.fileContent}
 			</Text>
 		);
 	}
