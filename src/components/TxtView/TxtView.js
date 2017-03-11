@@ -2,22 +2,24 @@ import React, { Component } from 'react';
 import {
 	StyleSheet,
 	Text,
-	View
+	ScrollView
 } from 'react-native';
 
 
 export default class TxtView extends Component {
 	render() {
 		return (
-			<Text style={styles.txtView}>
-				{this.props.fileContent}
-			</Text>
+			<ScrollView>
+				<Text style={styles.txtView} selectable>
+					{this.props.fileContent}
+				</Text>
+			</ScrollView>
 		);
 	}
 }
 
 TxtView.propTypes = {
-  fileContent: React.PropTypes.string,
+	fileContent: React.PropTypes.string,
 };
 
 
