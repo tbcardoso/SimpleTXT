@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="TxtView">
+        <attr name="fileContent" format="string" />
+    </declare-styleable>
+</resources>
