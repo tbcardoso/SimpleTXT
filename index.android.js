@@ -1,5 +1,4 @@
 import { AppRegistry } from 'react-native';
-import SimpleTXT from './src/main'
-
+import SimpleTXT from './src/main';
 
 AppRegistry.registerComponent('SimpleTXT', () => SimpleTXT);

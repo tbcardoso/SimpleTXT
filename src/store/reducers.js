@@ -1,7 +1,7 @@
-import routes from '../routes'
+import routes from '../routes';
 
 let reducers = {};
-routes.routes.map((route)=>{
+routes.routes.map((route) => {
 	reducers[route.title] = route.reducer;
 });
 

@@ -1,0 +1,38 @@
+{
+	"extends": [
+		"standard",
+		"plugin:promise/recommended",
+		"plugin:react/recommended",
+		"plugin:react-native/all"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"plugins": [
+		"standard",
+		"promise",
+		"react",
+		"react-native"
+	],
+	"rules": {
+		"indent": [
+			"error",
+			"tab"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-tabs": [
+			"off"
+		],
+		"space-before-function-paren": [
+			"off"
+		],
+		"comma-dangle": [
+			"off"
+		]
+	}
+}

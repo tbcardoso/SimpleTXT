@@ -3,38 +3,34 @@ import TextViewer from '../components/TextViewer';
 import { FilePickerManager } from 'NativeModules';
 import { selectFileSuccess } from '../modules/actions';
 
-
 function onOpenFile(dispatch) {
 	FilePickerManager.showFilePicker(null, (response) => {
 		console.log('Response = ', response);
 
 		if (response.didCancel) {
 			console.log('User cancelled file picker');
-		}
-		else if (response.error) {
+		} else if (response.error) {
 			console.log('FilePickerManager Error: ', response.error);
-		}
-		else {
+		} else {
 			dispatch(selectFileSuccess(response.path));
 		}
 	});
 }
-
 
 function mapStateToProps(state) {
 	return {
 		filePath: state.TextViewer.selectedFile.filePath,
 		fileContent: state.TextViewer.selectedFile.fileContent,
 		loadingFilePath: state.TextViewer.selectedFile.loadingFilePath,
-	}
+	};
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
 		onOpenFile: () => {
-      onOpenFile(dispatch)
-    }
-	}
+			onOpenFile(dispatch);
+		}
+	};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TextViewer);

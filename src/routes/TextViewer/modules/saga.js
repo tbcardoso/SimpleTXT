@@ -3,14 +3,13 @@ import * as Actions from './actions';
 import RNFetchBlob from 'react-native-fetch-blob';
 import { ToastAndroid } from 'react-native';
 
-function* selectedFileSaga(action) {
+function * selectedFileSaga(action) {
 	console.log('Selected file Saga: ', action);
 
 	try {
 		const data = yield call(RNFetchBlob.fs.readFile, action.filePath, 'utf8');
 		//console.log('File data: ', data);
 		yield put(Actions.loadFileSuccess(action.filePath, data));
-		
 	} catch (e) {
 		console.log('Load File Error: ', e);
 		ToastAndroid.show(e.message, ToastAndroid.SHORT)
@@ -18,6 +17,6 @@ function* selectedFileSaga(action) {
 	}
 }
 
-export default function* saga() {
+export default function * saga() {
 	yield takeLatest(Actions.SELECT_FILE_SUCCESS, selectedFileSaga);
 }
