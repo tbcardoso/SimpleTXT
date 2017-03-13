@@ -2,6 +2,7 @@ import React from 'react';
 import {
 	StyleSheet,
 	View,
+	ActivityIndicator,
 } from 'react-native';
 import TxtView from '../../../components/TxtView/TxtView';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -28,27 +29,45 @@ export default class TextViewer extends React.Component {
 	}
 
 	render() {
-		const pos = this.props.filePath.lastIndexOf('/');
-		const fileName = this.props.filePath.substring(Math.max(0, pos+1));
-		const title = fileName || 'SimpleTXT';
-		const fileContent = fileName ? this.props.fileContent : sampleText;
 		return (
-			<View style={{ flex: 1 }}>
-				<Icon.ToolbarAndroid
-					title={title}
-					style={styles.toolbar}
-					actions={toolbarActions}
-					onActionSelected={this._onActionSelected} />
-				<TxtView style={{ flex: 1 }}
-					filePath={this.props.filePath} fileContent={fileContent} />
+			<View style={styles.parent}>
+				{this.renderToolbar()}
+				{this.renderContent()}
 			</View>
 		);
 	}
+
+	renderToolbar() {
+		const pos = this.props.filePath.lastIndexOf('/');
+		const fileName = this.props.filePath.substring(Math.max(0, pos + 1));
+		const title = fileName || 'SimpleTXT';
+
+		return (
+			<Icon.ToolbarAndroid
+				title={title}
+				style={styles.toolbar}
+				actions={toolbarActions}
+				onActionSelected={this._onActionSelected} />
+		);
+	}
+
+
+	renderContent() {
+		if (this.props.loadingFilePath) {
+			return (<ActivityIndicator style={styles.activityIndicator} size="large" color="white" />);
+		} else {
+			const fileContent = this.props.filePath ? this.props.fileContent : sampleText;
+			return (<TxtView style={styles.txtView}
+				filePath={this.props.filePath} fileContent={fileContent} />);
+		}
+	}
+
 }
 
 TextViewer.propTypes = {
-  filePath: React.PropTypes.string.isRequired,
+	filePath: React.PropTypes.string.isRequired,
 	fileContent: React.PropTypes.string,
+	loadingFilePath: React.PropTypes.string,
 	onOpenFile: React.PropTypes.func.isRequired,
 };
 
@@ -59,8 +78,21 @@ const toolbarActions = [
 
 
 const styles = StyleSheet.create({
+	parent: {
+		flex: 1,
+	},
 	toolbar: {
 		backgroundColor: '#a9a9a9',
 		height: 56,
 	},
+	txtView: {
+		flex: 1,
+	},
+	activityIndicator: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		padding: 8,
+		backgroundColor: '#cccccc',
+		flex: 1,
+	}
 });

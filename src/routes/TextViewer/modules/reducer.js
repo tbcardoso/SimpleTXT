@@ -3,7 +3,10 @@ import * as Actions from './actions';
 
 
 const selectedFileInitialState = {
-	filePath: ''
+	filePath: '',
+  fileContent: '',
+  loadingFilePath: '',
+  error: '',
 }
 
 function selectedFile(state = selectedFileInitialState, action) {

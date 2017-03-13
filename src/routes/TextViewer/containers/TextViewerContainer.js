@@ -25,6 +25,7 @@ function mapStateToProps(state) {
 	return {
 		filePath: state.TextViewer.selectedFile.filePath,
 		fileContent: state.TextViewer.selectedFile.fileContent,
+		loadingFilePath: state.TextViewer.selectedFile.loadingFilePath,
 	}
 }
 
