@@ -2,6 +2,7 @@
 	"parser": "babel-eslint",
 	"extends": [
 		"standard",
+		"eslint:recommended",
 		"plugin:promise/recommended",
 		"plugin:react/recommended",
 		"plugin:react-native/all"
@@ -39,6 +40,9 @@
 			"off"
 		],
 		"spaced-comment": [
+			"off"
+		],
+		"no-console": [
 			"off"
 		],
 		"react-native/split-platform-components": [
