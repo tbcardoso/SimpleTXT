@@ -19,7 +19,8 @@
 	"rules": {
 		"indent": [
 			"error",
-			"tab"
+			"tab",
+			{"SwitchCase" : 1}
 		],
 		"semi": [
 			"error",
@@ -32,6 +33,12 @@
 			"off"
 		],
 		"comma-dangle": [
+			"off"
+		],
+		"spaced-comment": [
+			"off"
+		],
+		"react-native/split-platform-components": [
 			"off"
 		]
 	}

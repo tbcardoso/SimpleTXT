@@ -12,7 +12,7 @@ function * selectedFileSaga(action) {
 		yield put(Actions.loadFileSuccess(action.filePath, data));
 	} catch (e) {
 		console.log('Load File Error: ', e);
-		ToastAndroid.show(e.message, ToastAndroid.SHORT)
+		ToastAndroid.show(e.message, ToastAndroid.SHORT);
 		yield put(Actions.loadFileError(action.filePath, e.message));
 	}
 }

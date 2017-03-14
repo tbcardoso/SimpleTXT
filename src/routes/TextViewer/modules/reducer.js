@@ -15,7 +15,7 @@ function selectedFile(state = selectedFileInitialState, action) {
 		case Actions.LOAD_FILE_SUCCESS:
 			return {...state, loadingFilePath: '', filePath: action.filePath, fileContent: action.fileContent};
 		case Actions.LOAD_FILE_ERROR:
-			return {...state, loadingFilePath: '', error: action.error };
+			return {...state, loadingFilePath: '', error: action.error};
 		default:
 			return state;
 	}
