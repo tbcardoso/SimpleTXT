@@ -1,4 +1,5 @@
 {
+	"parser": "babel-eslint",
 	"extends": [
 		"standard",
 		"plugin:promise/recommended",
@@ -20,7 +21,9 @@
 		"indent": [
 			"error",
 			"tab",
-			{"SwitchCase" : 1}
+			{
+				"SwitchCase": 1
+			}
 		],
 		"semi": [
 			"error",
@@ -39,6 +42,9 @@
 			"off"
 		],
 		"react-native/split-platform-components": [
+			"off"
+		],
+		"react-native/no-color-literals": [
 			"off"
 		]
 	}

@@ -7,7 +7,6 @@ import {
 import TxtView from '../../../components/TxtView/TxtView';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
 const sampleText = `
   ____  _                 _     _______  _______ 
  / ___|(_)_ __ ___  _ __ | | __|_   _\\ \\/ /_   _|
@@ -17,9 +16,7 @@ const sampleText = `
                    |_|                           
 `;
 
-
 export default class TextViewer extends React.Component {
-
 	_onActionSelected = (position) => {
 		switch (position) {
 			case 0:
@@ -51,7 +48,6 @@ export default class TextViewer extends React.Component {
 		);
 	}
 
-
 	renderContent() {
 		if (this.props.loadingFilePath) {
 			return (<ActivityIndicator style={styles.activityIndicator} size="large" color="white" />);
@@ -61,7 +57,6 @@ export default class TextViewer extends React.Component {
 				filePath={this.props.filePath} fileContent={fileContent} />);
 		}
 	}
-
 }
 
 TextViewer.propTypes = {
@@ -71,11 +66,9 @@ TextViewer.propTypes = {
 	onOpenFile: React.PropTypes.func.isRequired,
 };
 
-
 const toolbarActions = [
 	{ title: 'Open File', iconName: 'insert-drive-file', iconSize: 30, show: 'always' },
 ];
-
 
 const styles = StyleSheet.create({
 	parent: {
