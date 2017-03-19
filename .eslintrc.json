@@ -30,6 +30,10 @@
 			"error",
 			"always"
 		],
+		"react/jsx-indent": [
+			"error",
+			"tab"
+		],
 		"no-tabs": [
 			"off"
 		],

@@ -8,7 +8,7 @@ export default class SimpleTXT extends Component {
 		const Route = Routes.routes[0].component;
 		return (
 			<Provider store={createStore()}>
-					<Route />
+				<Route />
 			</Provider>
 		);
 	}
