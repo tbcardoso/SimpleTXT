@@ -7,15 +7,6 @@ import {
 import TxtView from '../../../components/TxtView/TxtView';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const sampleText = `
-  ____  _                 _     _______  _______ 
- / ___|(_)_ __ ___  _ __ | | __|_   _\\ \\/ /_   _|
- \\___ \\| | '_ ' _ \\| '_ \\| |/ _ \\| |  \\  /  | |  
-  ___) | | | | | | | |_) | |  __/| |  /  \\  | |  
- |____/|_|_| |_| |_| .__/|_|\\___||_| /_/\\_\\ |_|  
-                   |_|                           
-`;
-
 export default class TextViewer extends React.Component {
 	_onActionSelected = (position) => {
 		switch (position) {
@@ -52,9 +43,8 @@ export default class TextViewer extends React.Component {
 		if (this.props.loadingFilePath) {
 			return (<ActivityIndicator style={styles.activityIndicator} size="large" color="white" />);
 		} else {
-			const fileContent = this.props.filePath ? this.props.fileContent : sampleText;
 			return (<TxtView style={styles.txtView}
-				filePath={this.props.filePath} fileContent={fileContent} />);
+				filePath={this.props.filePath} fileContent={this.props.fileContent} />);
 		}
 	}
 }
