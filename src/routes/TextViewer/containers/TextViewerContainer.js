@@ -14,9 +14,7 @@ class TextViewerContainer extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log('TextViewerContainer componentDidMount');
 		if (!this.props.filePath && !this.props.fileError) {
-			console.log('TextViewerContainer will try to load last file.');
 			this.props.loadStartupFile();
 		}
 	}
