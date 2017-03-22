@@ -1,6 +1,8 @@
 # SimpleTXT
 
-A simple txt viewer for Android.
+A txt document viewer for Android.
+
+Developed with React Native, Redux, and Realm.
 
 
 ## License
