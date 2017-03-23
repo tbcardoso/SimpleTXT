@@ -33,6 +33,7 @@ export default class TextViewer extends React.Component {
 		return (
 			<Icon.ToolbarAndroid
 				title={title}
+				titleColor='#ffffff'
 				style={styles.toolbar}
 				actions={toolbarActions}
 				onActionSelected={this._onActionSelected} />
@@ -65,17 +66,18 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 	toolbar: {
-		backgroundColor: '#a9a9a9',
+		backgroundColor: '#607d8b',
 		height: 56,
 	},
 	txtView: {
 		flex: 1,
+		marginHorizontal: 3,
 	},
 	activityIndicator: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 8,
-		backgroundColor: '#cccccc',
+		backgroundColor: '#455a64',
 		flex: 1,
 	}
 });
