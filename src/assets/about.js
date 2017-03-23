@@ -16,4 +16,5 @@ Used libraries and assets
 	react-native-file-picker
 	react-native-vector-icons, by Joel Arvidsson, licensed under the MIT License
 	Material Icons, by Google, licensed under the Apache License Version 2.0
+	Launcher Icon made by Dimitry Miroliubov from www.flaticon.com, licensed under the Flaticon Basic License
 `;
