@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import * as Actions from './actions';
+import about from '../../../assets/about';
 
 const selectedFileInitialState = {
 	filePath: '',
@@ -16,6 +17,8 @@ function selectedFile(state = selectedFileInitialState, action) {
 			return { ...state, loadingFilePath: '', filePath: action.filePath, fileContent: action.fileContent, error: '' };
 		case Actions.LOAD_FILE_ERROR:
 			return { ...state, loadingFilePath: '', error: action.error };
+		case Actions.ABOUT_SCREEN_SELECTED:
+			return { ...state, loadingFilePath: '', filePath: 'About', fileContent: about, error: '' };
 		default:
 			return state;
 	}

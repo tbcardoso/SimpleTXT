@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import TextViewer from '../components/TextViewer';
 import { FilePickerManager } from 'NativeModules';
-import { selectFileSuccess, loadStartupFile } from '../modules/actions';
+import * as Actions from '../modules/actions';
 
 class TextViewerContainer extends React.Component {
 
@@ -34,7 +34,7 @@ function onOpenFile(dispatch) {
 		} else if (response.error) {
 			console.log('FilePickerManager Error: ', response.error);
 		} else {
-			dispatch(selectFileSuccess(response.path));
+			dispatch(Actions.selectFileSuccess(response.path));
 		}
 	});
 }
@@ -53,7 +53,7 @@ function mapDispatchToProps(dispatch) {
 		onOpenFile: () => {
 			onOpenFile(dispatch);
 		},
-		...bindActionCreators({ loadStartupFile }, dispatch),
+		...bindActionCreators({ loadStartupFile: Actions.loadStartupFile, onAbout: Actions.aboutScreenSelected }, dispatch),
 	};
 }
 

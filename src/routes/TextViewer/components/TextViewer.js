@@ -13,6 +13,9 @@ export default class TextViewer extends React.Component {
 			case 0:
 				this.props.onOpenFile();
 				break;
+			case 1:
+				this.props.onAbout();
+				break;
 		}
 	}
 
@@ -55,10 +58,12 @@ TextViewer.propTypes = {
 	fileContent: React.PropTypes.string,
 	loadingFilePath: React.PropTypes.string,
 	onOpenFile: React.PropTypes.func.isRequired,
+	onAbout: React.PropTypes.func.isRequired,
 };
 
 const toolbarActions = [
 	{ title: 'Open File', iconName: 'insert-drive-file', iconSize: 30, show: 'always' },
+	{ title: 'About', show: 'never' },
 ];
 
 const styles = StyleSheet.create({
