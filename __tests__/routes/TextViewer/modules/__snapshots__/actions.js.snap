@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextViewer Action Creators Action Creator aboutScreenSelected 1`] = `
+Object {
+  "type": "ABOUT_SCREEN_SELECTED",
+}
+`;
+
+exports[`TextViewer Action Creators Action Creator loadFileError 1`] = `
+Object {
+  "error": "Test error message.",
+  "filePath": "test/filepath.txt",
+  "type": "LOAD_FILE_ERROR",
+}
+`;
+
+exports[`TextViewer Action Creators Action Creator loadFileSuccess 1`] = `
+Object {
+  "fileContent": "Lorem ipsum...",
+  "filePath": "test/filepath.txt",
+  "type": "LOAD_FILE_SUCCESS",
+}
+`;
+
+exports[`TextViewer Action Creators Action Creator loadStartupFile 1`] = `
+Object {
+  "type": "LOAD_STARTUP_FILE",
+}
+`;
+
+exports[`TextViewer Action Creators Action Creator selectFileSuccess 1`] = `
+Object {
+  "filePath": "test/filepath.txt",
+  "type": "SELECT_FILE_SUCCESS",
+}
+`;
