@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer selectedFile Action aboutScreenSelected 1`] = `
+Object {
+  "error": "",
+  "fileContent": "SimpleTXT
+	Created by Tiago Cardoso
+	Licensed under the GNU General Public License (GPLv3)
+
+
+Used libraries and assets
+
+	React, by Facebook, Inc., licensed under the BSD License
+	React Native, by Facebook, Inc., licensed under the BSD License
+	realm, by Realm, licensed under the Apache License Version 2.0
+	Redux, by Dan Abramov, licensed under the MIT License
+	react-redux, by Dan Abramov, licensed under the MIT License
+	redux-saga, by Yassine Elouafi, licensed under the MIT License
+	react-native-fetch-blob, licensed under the MIT License
+	react-native-file-picker
+	react-native-vector-icons, by Joel Arvidsson, licensed under the MIT License
+	Material Icons, by Google, licensed under the Apache License Version 2.0
+	Launcher Icon made by Dimitry Miroliubov from www.flaticon.com, licensed under the Flaticon Basic License
+",
+  "filePath": "About",
+  "loadingFilePath": "",
+}
+`;
+
+exports[`Reducer selectedFile Action loadFileError 1`] = `
+Object {
+  "error": "Error message.",
+  "fileContent": "",
+  "filePath": "",
+  "loadingFilePath": "",
+}
+`;
+
+exports[`Reducer selectedFile Action loadFileSuccess 1`] = `
+Object {
+  "error": "",
+  "fileContent": "Lorem Ipsum...",
+  "filePath": "testPath",
+  "loadingFilePath": "",
+}
+`;
+
+exports[`Reducer selectedFile Action selectFileSuccess 1`] = `
+Object {
+  "error": "",
+  "fileContent": "",
+  "filePath": "",
+  "loadingFilePath": "testPath",
+}
+`;
