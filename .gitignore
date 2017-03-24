@@ -56,3 +56,7 @@ fastlane/screenshots
 #
 jsconfig.json
 .vscode/
+
+# Jest
+#
+coverage/
