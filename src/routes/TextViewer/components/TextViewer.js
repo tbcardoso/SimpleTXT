@@ -48,7 +48,7 @@ export default class TextViewer extends React.Component {
 			return (<ActivityIndicator style={styles.activityIndicator} size="large" color="white" />);
 		} else {
 			return (<TxtView style={styles.txtView}
-				filePath={this.props.filePath} fileContent={this.props.fileContent} />);
+				filePath={this.props.filePath} fileContent={this.props.fileContent || ''} />);
 		}
 	}
 }
