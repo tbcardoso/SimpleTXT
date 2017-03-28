@@ -3,7 +3,7 @@ before_install:
 - nvm install 7
 - node --version
 install:
-- yarn
+- npm install
 android:
   components:
   - build-tools-23.0.1
