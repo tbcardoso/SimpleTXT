@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component TextViewer renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <ToolbarAndroid
+    actions={
+      Array [
+        Object {
+          "iconName": "insert-drive-file",
+          "iconSize": 30,
+          "show": "always",
+          "title": "Open File",
+        },
+        Object {
+          "show": "never",
+          "title": "About",
+        },
+      ]
+    }
+    onActionSelected={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#607d8b",
+        "height": 56,
+      }
+    }
+    title="SimpleTXT"
+    titleColor="#ffffff"
+  />
+  <STTxtView
+    fileContent=""
+    filePath=""
+    style={
+      Object {
+        "flex": 1,
+        "marginHorizontal": 3,
+      }
+    }
+  />
+</View>
+`;
