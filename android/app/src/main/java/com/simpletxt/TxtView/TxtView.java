@@ -15,7 +15,7 @@ import com.simpletxt.R;
  */
 public class TxtView extends FrameLayout {
 
-    TextView txtContent;
+    private TextView txtContent;
 
     public TxtView(Context context) {
         super(context);
