@@ -4,7 +4,7 @@ import RNFetchBlob from 'react-native-fetch-blob';
 import { ToastAndroid } from 'react-native';
 import realm from '../../../realm';
 
-function* loadStartupFileSaga(action) {
+export function* loadStartupFileSaga(action) {
 	// console.log('loadStartupFileSaga: ', action);
 	let files = realm.objects('File');
 	// console.log('file.length: ', files.length);
@@ -15,7 +15,7 @@ function* loadStartupFileSaga(action) {
 	}
 }
 
-function* selectedFileSaga(action) {
+export function* selectedFileSaga(action) {
 	console.log('Selected file Saga: ', action);
 
 	try {

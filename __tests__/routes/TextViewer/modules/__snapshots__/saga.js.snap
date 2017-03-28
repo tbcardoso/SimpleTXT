@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextViewer sagas Saga loadStartupFileSaga 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "filePath": "path/to/file.txt",
+      "type": "SELECT_FILE_SUCCESS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`TextViewer sagas Saga selectedFileSaga 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "path/to/file.txt",
+      "utf8",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`TextViewer sagas Saga selectedFileSaga 2`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "fileContent": "Lorem ipsum...",
+      "filePath": "path/to/file.txt",
+      "type": "LOAD_FILE_SUCCESS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`TextViewer sagas Saga selectedFileSaga exception 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "CALL": Object {
+    "args": Array [
+      "path/to/file.txt",
+      "utf8",
+    ],
+    "context": null,
+    "fn": [Function],
+  },
+}
+`;
+
+exports[`TextViewer sagas Saga selectedFileSaga exception 2`] = `
+Object {
+  "done": false,
+  "value": Object {
+    "@@redux-saga/IO": true,
+    "PUT": Object {
+      "action": Object {
+        "error": "Error",
+        "filePath": "path/to/file.txt",
+        "type": "LOAD_FILE_ERROR",
+      },
+      "channel": null,
+    },
+  },
+}
+`;
