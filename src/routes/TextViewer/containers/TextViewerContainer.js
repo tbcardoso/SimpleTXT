@@ -6,7 +6,6 @@ import { FilePickerManager } from 'NativeModules';
 import * as Actions from '../modules/actions';
 
 class TextViewerContainer extends React.Component {
-
 	static propTypes = {
 		filePath: React.PropTypes.string.isRequired,
 		fileError: React.PropTypes.string.isRequired,
@@ -23,7 +22,6 @@ class TextViewerContainer extends React.Component {
 		return <TextViewer {...this.props} />;
 	}
 }
-
 
 function onOpenFile(dispatch) {
 	FilePickerManager.showFilePicker(null, (response) => {

@@ -3,7 +3,7 @@
 let fs = {};
 
 function readFile(directoryPath) {
-	return "Lorem ipsum.";
+	return 'Lorem ipsum.';
 }
 
 fs.readFile = readFile;

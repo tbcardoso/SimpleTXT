@@ -1,4 +1,4 @@
-export default 
+export default
 `SimpleTXT
 	Created by Tiago Cardoso
 	Licensed under the GNU General Public License (GPLv3)

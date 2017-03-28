@@ -1,8 +1,8 @@
 {
 	"parser": "babel-eslint",
 	"extends": [
-		"standard",
 		"eslint:recommended",
+		"standard",
 		"plugin:promise/recommended",
 		"plugin:react/recommended",
 		"plugin:react-native/all"
